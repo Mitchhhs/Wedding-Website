@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mitch and Becca Wedding Website</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+ 
+
+  <%= csrf_meta_tags %>
+
+
+  <!--jQuery -->
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="/assets/bootstrap.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+</head>
+<body>
+
+	<%= render "navbar" %>
+
+	<% if @home == true %>
+
+     <div class="container marketing">
+
+
+	<img class="img-rounded img-responsive" src = "assets/wedding_main.jpg">
+	<br>
+	</div>
+
+	<div class="container marketing" align="center">
+	<b>SAVE THE DATE&nbsp;&nbsp;&nbsp; <img src = "assets/rings.jpg" height='50'>&nbsp;&nbsp;&nbsp; JULY 15, 2017</b>
+
+	</div>
+	<br>
+	<%= render "ourstory" %>
+
+
+
+	<br>
+
+	<%= render "details" %>
+
+	<br>
+
+	<%= render "travel" %>
+
+	<br>
+
+
+	<br>
+
+<% else %>
+	<%= yield %>
+<% end %>
+
+	</div>
+
+</body>
+</html>
